@@ -1,3 +1,15 @@
+#!/usr/bin/env node
+
+// Required parameters:
+// @raycast.schemaVersion 1
+// @raycast.title Readwise
+// @raycast.mode fullOutput
+
+// Optional parameters:
+// @raycast.icon ⚡️
+// @raycast.argument1 { "type": "text", "placeholder": "Number of days" }
+// @raycast.packageName Tana Paste
+
 import fetch from "isomorphic-fetch";
 import { config } from "./config.mjs";
 
@@ -8,14 +20,11 @@ const getItemsFromReadwise = async (daysToFetch = 1) => {
   const updatedAfterDate = new Date();
   updatedAfterDate.setTime(updatedAfterDate.getTime() - dateOffset);
 
-  const response = await fetch(
-    `${HIGHLIGHTS_URL}?updatedAfter=${updatedAfterDate.toISOString()}`,
-    {
-      headers: {
-        Authorization: `Token ${config.readwiseToken}`,
-      },
-    }
-  );
+  const response = await fetch(`${HIGHLIGHTS_URL}?updatedAfter=${updatedAfterDate.toISOString()}`, {
+    headers: {
+      Authorization: `Token ${config.readwiseToken}`,
+    },
+  });
   const data = await response.json();
   data.results.forEach((book) => {
     const isValidSourceURL = book.source_url?.startsWith("https://");

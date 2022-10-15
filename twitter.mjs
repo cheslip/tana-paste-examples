@@ -1,3 +1,15 @@
+#!/usr/bin/env node
+
+// Required parameters:
+// @raycast.schemaVersion 1
+// @raycast.title Twitter
+// @raycast.mode fullOutput
+
+// Optional parameters:
+// @raycast.icon ⚡️
+// @raycast.argument1 { "type": "text", "placeholder": "Tweet URL" }
+// @raycast.packageName Tana Paste
+
 import Twit from "twit";
 import { formatDate } from "./helpers.mjs";
 import entities from "entities";
@@ -33,9 +45,7 @@ getTweets(url)
     tweets.forEach((firstTweet) => {
       if (getTweetText(firstTweet).trim() !== "") {
         let result = `- ${getTweetText(firstTweet).split("\n").join(" ")} #tweet
-  - Tweet URL:: https://twitter.com/${firstTweet.user.screen_name}/status/${
-          firstTweet.id
-        }
+  - Tweet URL:: https://twitter.com/${firstTweet.user.screen_name}/status/${firstTweet.id}
   - Name:: [[${firstTweet.user.name}]] 
   - Twitter username:: [@${firstTweet.user.screen_name}](https://twitter.com/${
           firstTweet.user.screen_name

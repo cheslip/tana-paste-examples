@@ -1,3 +1,15 @@
+#!/usr/bin/env node
+
+// Required parameters:
+// @raycast.schemaVersion 1
+// @raycast.title RSS
+// @raycast.mode fullOutput
+
+// Optional parameters:
+// @raycast.icon ⚡️
+// @raycast.argument1 { "type": "text", "placeholder": "RSS feed URL" }
+// @raycast.packageName Tana Paste
+
 import Parser from "rss-parser";
 import { formatDate } from "./helpers.mjs";
 let parser = new Parser();

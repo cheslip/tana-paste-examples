@@ -1,3 +1,15 @@
+#!/usr/bin/env node
+
+// Required parameters:
+// @raycast.schemaVersion 1
+// @raycast.title Hypothesis
+// @raycast.mode fullOutput
+
+// Optional parameters:
+// @raycast.icon ⚡️
+// @raycast.argument1 { "type": "text", "placeholder": "Source URL" }
+// @raycast.packageName Tana Paste
+
 import queryString from "query-string";
 import fetch from "isomorphic-fetch";
 import lodash from "lodash";

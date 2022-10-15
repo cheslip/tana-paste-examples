@@ -1,4 +1,48 @@
-# Tana Paste example scripts
+# Tana Paste examples for Raycast
+
+Forked from tanainc/tana-paste-examples
+
+This repo is intended to show some examples on how to use Tana Paste
+with [Raycast](https://www.raycast.com/). The examples use Raycast's
+[script commands](https://www.raycast.com/blog/getting-started-with-script-commands)
+to execute the scripts. 
+
+## Raycast Setup
+
+### Configure `tana-paste-examples` directory in Raycast
+
+![prefs screenshot](media/raycast-prefs.png)
+
+1. Open Raycast preferences (`Cmd-Space` followed by `Cmd-,`)
+2. Open "Script Commands" preferences (Extensions->Scripts->Script Commands)
+3. Click "Add Directories"
+4. Select your `tana-paste-examples` directory
+
+### Add Raycast comments to scripts
+
+Once the directory is added, Raycast will automatically discover any commands
+containing Raycast-specific comments. These comments act as instructions, which
+tell Raycast the name of the script, the arguments, icons, etc.
+
+See the scripts in this repo for examples on what the comment header looks like.
+
+For example, see [github.mjs](github.mjs)
+
+### Start using Raycast with Tana Paste scripts
+
+#### RSS example
+
+NYT example feed: https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+
+Type `rss` to find the RSS command, and paste in an RSS feed URL:
+![raycast rss](media/raycast-rss.png)
+
+Output:
+![raycast output](media/raycast-output.png)
+
+Press `Cmd-Shift-C` to copy to clipboard
+
+Open Tana and paste result!
 
 ## Example scripts that generate Tana Paste output
 

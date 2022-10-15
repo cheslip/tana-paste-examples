@@ -1,3 +1,16 @@
+#!/usr/bin/env node
+
+// Required parameters:
+// @raycast.schemaVersion 1
+// @raycast.title GitHub
+// @raycast.mode fullOutput
+
+// Optional parameters:
+// @raycast.icon ⚡️
+// @raycast.argument1 { "type": "text", "placeholder": "Owner" }
+// @raycast.argument2 { "type": "text", "placeholder": "Repo" }
+// @raycast.packageName Tana Paste
+
 import { Octokit } from "octokit";
 import { formatDate } from "./helpers.mjs";
 import { config } from "./config.mjs";
