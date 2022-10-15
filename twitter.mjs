@@ -7,7 +7,7 @@
 
 // Optional parameters:
 // @raycast.icon ⚡️
-// @raycast.argument1 { "type": "text", "placeholder": "Tweet URL" }
+// @raycast.argument1 { "type": "text", "placeholder": "Tweet ID" }
 // @raycast.packageName Tana Paste
 
 import Twit from "twit";

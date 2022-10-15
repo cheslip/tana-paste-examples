@@ -1,6 +1,6 @@
 # Tana Paste examples for Raycast
 
-Forked from tanainc/tana-paste-examples
+Main repo: [tanainc/tana-paste-examples](https://github.com/tanainc/tana-paste-examples)
 
 This repo is intended to show some examples on how to use Tana Paste
 with [Raycast](https://www.raycast.com/). The examples use Raycast's
@@ -43,6 +43,8 @@ Output:
 Press `Cmd-Shift-C` to copy to clipboard
 
 Open Tana and paste result!
+
+![tana paste result](media/tana-paste.png)
 
 ## Example scripts that generate Tana Paste output
 
